@@ -229,7 +229,7 @@ FLAG_PART_3={FLAG_PART_3}
 INTERNAL_AUTH_TOKEN=aavade
 SESSION_SECRET=shubman_hardik_rashid
 ADMIN_ENDPOINT=/api/admin/flag
-NOTE=The trophy room requires entry credentials. GT leadership trio holds the key - hash their combined identity with SHA256 and present it as 'gt_session'.
+NOTE=The trophy room requires entry credentials. GT leadership trio holds the key - hash their combined identity and present it as 'gt_session'.
 """
         return Response(env_content, mimetype='text/plain')
     return jsonify({'error': 'Not found', 'status': 'Resource restricted to containerized service clients only'}), 404
