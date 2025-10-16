@@ -201,7 +201,7 @@ def system_info():
 @app.route(HIDDEN_ENDPOINT)
 def diagnostics():
     auth_header = request.headers.get('X-GT-Internal-Auth')
-    if auth_header.lower() == 'aavade':
+    if auth_header and auth_header.lower() == 'aavade':
         diagnostic_data = {
             'cpu_usage': '23%',
             'memory': '1.2GB/4GB',
